@@ -1,0 +1,39 @@
+.auth_page_content {
+  min-height: 100%;
+  background-color: #044C4C;
+}
+
+.login_box {
+  opacity: 0.85;
+  background-color: #ffffff;
+  width: 100%;
+  border-bottom: 7px solid #ed1c24;
+}
+
+.login-input {
+  padding: 5% 0 0 0;
+}
+
+.btn-red {
+  margin-top: 8%;
+  min-width: 50%;
+  padding: 2% 2% 2% 2%;
+}
+
+.information-text {
+  margin: 8% auto 8% auto;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  color: #8e8e8e;
+}
+
+.btn-red.mat-raised-button:([disabled]) {
+  color: #FFFFFF;
+  background-color: #008cba;
+}
+
+.invalid_login_txt {
+  color: #f44336;
+  font-size: small;
+}
