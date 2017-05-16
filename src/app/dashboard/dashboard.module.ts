@@ -5,12 +5,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
-
+import { SearchVacancyComponent } from '../vacancy/search-vacancy/search-vacancy.component';
 
 @NgModule({
   imports: [BrowserModule, CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
-  declarations: [DashboardComponent],
-  exports: [DashboardComponent],
+  declarations: [DashboardComponent,SearchVacancyComponent],
+  exports: [DashboardComponent,SearchVacancyComponent],
 })
 
 export class DashboardModule { }

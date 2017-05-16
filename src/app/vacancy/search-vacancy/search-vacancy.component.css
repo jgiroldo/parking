@@ -1,0 +1,39 @@
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #000;
+  line-height: 50px;
+  text-align: center;
+  background: #fff;
+  margin-top: 10px;
+}
+
+.circle-right {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #000;
+  line-height: 50px;
+  text-align: center;
+  background: #fff;
+  margin-top: 10px;
+  float: right;
+}
+
+.inside-div{
+  background-color: #08130e;
+  padding: 10px;
+  border-bottom: 8px solid #EB5800;
+  min-height: 113px;
+}
+
+.inside-div-logo{
+  width: 45px;
+}
+
+.livre{
+  padding-top: 15px;
+}

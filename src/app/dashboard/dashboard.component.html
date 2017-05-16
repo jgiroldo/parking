@@ -1,1 +1,69 @@
-Conteudo tela principal
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-green">
+  <!-- <div class="row"> -->
+  <div class="navbar-brand"
+    style="padding-left:1.25em">
+    <img src="assets/img/Logo.png"
+      alt=""
+      width="135px;">
+  </div>
+  <div class="dashboard-header">
+    Sistema de controle para estacionamento
+  </div>
+
+  <!-- </div> -->
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-sm-3 col-md-2 hidden-xs-down sidebar">
+      <div class="row"
+        style="padding-top:15px;">
+        <div class="col-12">
+          <button type="button"
+            name="button"
+            class="nav-btn">Consultar Vagas</button>
+        </div>
+      </div>
+      <div class="row"
+        style="padding-top:15px;">
+        <div class="col-12">
+          <button type="button"
+            name="button"
+            class="nav-btn">Registrar Entrada</button>
+
+        </div>
+      </div>
+      <div class="row"
+        style="padding-top:15px;">
+        <div class="col-12">
+
+          <button type="button"
+            name="button"
+            class="nav-btn">Registrar Saída</button>
+        </div>
+      </div>
+      <div class="row"
+        style="padding-top:15px;">
+        <div class="col-12">
+
+          <button type="button"
+            name="button"
+            class="nav-btn">Registrar Ocorrência</button>
+        </div>
+      </div>
+      <div class="row"
+        style="padding-top:15px;">
+        <div class="col-12">
+
+          <button type="button"
+            name="button"
+            class="nav-btn">Relatórios</button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main-content">
+      <router-outlet>
+      </router-outlet>
+    </main>
+  </div>
+</div>
