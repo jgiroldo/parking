@@ -17,11 +17,11 @@ import { GlobalService }  from './global.service';
 import { LoginGuard }     from './login.guard';
 import { LogoutGuard }    from './logout.guard';
 
-// import { DashboardComponent }   from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
+
   ],
   imports: [
     BrowserModule,

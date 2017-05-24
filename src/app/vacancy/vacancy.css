@@ -1,0 +1,76 @@
+.input-span {
+  color: #fff;
+}
+
+.nav-btn {
+  min-width: 50%;
+  margin-left: 50%;
+  background-color: #EB5800;
+  border-color: #000;
+  /*font-size: 24px;*/
+  color: #fff;
+}
+
+.nav-btn:disabled {
+  background-color: #9a9296;
+  border-color: #fff;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #000;
+  line-height: 50px;
+  text-align: center;
+  background: #fff;
+  margin-top: 10px;
+}
+
+.circle-right {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: #000;
+  line-height: 50px;
+  text-align: center;
+  background: #fff;
+  margin-top: 10px;
+  float: right;
+}
+
+.inside-div {
+  background-color: #08130e;
+  padding: 4px;
+  border-bottom: 7px solid #EB5800;
+  min-height: 80px;
+}
+
+.inside-div-logo {
+  width: 28px;
+}
+
+.livre {
+  padding-top: 15px;
+}
+
+.exit-data {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.payment-div {
+  cursor: pointer;
+  padding-top: 10px;
+  min-height: 100px;
+  border: 2px solid #fff;
+}
+
+.actived {
+  color: #000;
+  min-height: 100px;
+  border: 2px solid #fff;
+  background-color: #fff;
+}

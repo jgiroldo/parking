@@ -1,0 +1,128 @@
+<div class="row">
+  <div class="col-12">
+    <div class="row"
+      style="margin-bottom: 25px;">
+      <div class="col-12"
+        style="color:#fff">
+        <h2>Registrar Saída</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <form [formGroup]="closeForm"
+          novalidate>
+          <div class="form-group">
+            <span class="input-span">Placa</span>
+            <input type="text"
+              formControlName="placa"
+              [(ngModel)]="filter.placa"
+              class="form-control">
+          </div>
+        </form>
+      </div>
+      <div class="col-2">
+        <button class="nav-btn"
+          style="margin-top: 30px; margin-left:0"
+          [disabled]="!closeForm.valid"
+          (click)="findPlaca()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="exitView!=undefined">
+  <div class="row"
+    style="background-color:#fff;">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-4">
+          <h4 class="text-center">Dados do Veículo</h4>
+          <p class="exit-data">Veiculo: {{exitView.Veiculo}}</p>
+          <p class="exit-data">Cor: {{exitView.Cor}}</p>
+          <p class="exit-data">Placa: {{exitView.Placa}}</p>
+        </div>
+        <div class="col-4"
+          style="border-left:5px solid #000;">
+          <h4 class="text-center">Dados da Estadia</h4>
+          <p class="exit-data">Vaga: {{exitView.Vaga}}</p>
+          <p class="exit-data">Hora da Entrada: {{exitView.HoraEntrada}}</p>
+          <p class="exit-data">Hora da Saída: {{exitView.HoraSaida}}</p>
+        </div>
+        <div class="col-4"
+          style="border-left:5px solid #000;">
+          <h4 class="text-center">Dados do Pagamento</h4>
+          <p class="exit-data">Tempo Contado: {{exitView.TempoContado}}</p>
+          <p class="exit-data">Valor a Pagar: {{exitView.Valor}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4"
+      style="color:#fff">
+      <div class="col-12"
+        style="color:#fff">
+        <h2>Pagamento</h2>
+      </div>
+      <h4>Forma de Pagamento</h4>
+      <div class="row text-center">
+        <div class="col-sm-5 payment-div"
+          [class.actived]="paymentType==1"
+          (click)="selectPayment(1)">
+          <img style="width:90%"
+            src="assets/img/Card.png"
+            alt="">
+          <p>Cartão</p>
+        </div>
+        <div class="col-sm-5 offset-sm-1 payment-div"
+          [class.actived]="paymentType==2"
+          (click)="selectPayment(2)">
+          <img style="width:90%"
+            src="assets/img/Money.png"
+            alt="">
+          <p>Dinheiro</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 offset-sm-2">
+      <div *ngIf="paymentType==1">
+        <div class="row">
+          <div class="col-12">
+            <h4>Cartão</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group row">
+              <span class="col-3 col-form-label input-span">Valor Total</span>
+              <div class="col-5">
+                <input type="text"
+                  class="form-control">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group row">
+              <span for="exampleSelect2"
+                class="col-3 col-form-label input-span">Selecione</span>
+              <div class="col-5">
+                <select class="form-control"
+                  id="exampleSelect2">
+              <option value="1">Débito</option>
+              <option value="2">Crédito</option>
+            </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="paymentType==2">
+        <div class="row">
+          <h4>Dinheiro</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

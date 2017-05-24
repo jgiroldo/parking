@@ -24,7 +24,7 @@ body {
 .sidebar {
   background-color: #044C4C;
   position: fixed;
-  top: 180px;
+  top: 115px;
   bottom: 0;
   left: 0;
   z-index: 1000;
@@ -98,7 +98,7 @@ body {
   padding: 20px;
   overflow-x: hidden;
   overflow-y: auto;
-  margin-top: 180px;
+  margin-top: 115px;
   position: fixed;
   background-color: #066566;
   bottom: 0;

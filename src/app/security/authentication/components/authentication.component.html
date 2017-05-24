@@ -20,19 +20,24 @@
                   type="text"
                   id="username"
                   formControlName="username"
+                  class="text-center"
                   [(ngModel)]="objAuthentication.UserName">
               </div>
             </div>
-            <div class="row login-input">
-              <div class="col-sm-12 text-center">
+            <div class="row login-input text-center ">
+              <div class="col-sm-12">
                 <input type="password"
                   placeholder="Senha"
                   id="password"
                   formControlName="password"
+                  class="text-center"
                   [(ngModel)]="objAuthentication.Password">
-                <span *ngIf="invalidLogin"
-                  class="col-sm-12 invalid_login_txt">Usuário e senha inválidos.</span>
               </div>
+            </div>
+            <div class="row">
+
+              <span *ngIf="invalidLogin"
+                class="col-sm-12 invalid_login_txt text-center">Usuário ou senha inválidos.</span>
             </div>
           </form>
           <div class="button-row text-center">
@@ -40,8 +45,10 @@
               [disabled]="!loginForm.valid"
               (click)="submit()">ENTRAR</button>
           </div>
-          <div class="col-sm-12">
-            <p class="information-text">Efetue o login para acessar o sistema</p>
+          <div class="row">
+            <div class="col-sm-12">
+              <p class="information-text">Efetue o login para acessar o sistema</p>
+            </div>
           </div>
         </div>
       </div>

@@ -122,40 +122,16 @@ export class AuthenticationComponent implements OnInit {
   }
 
   submit() {
-this.gs.setUserSession('asjdhfkjsahdfo8478rwu489r');
-    this.gs.setAuthenticated(true);
-    this.invalidLogin = false;
-    this.router.navigate(['']);
-
-    // this.loginService.login(this.objAuthentication).subscribe(
-    //   data => {
-    //     if (!data.Error) {
-    //       debugger;
-    //       if (data.Messages[0].Details) {
-    //         let generatedToken = data.Messages[0].Details
-    //         // this.userSession.SessionID = generatedToken;
-    //         // this.gs.setUserSession(this.userSession);
-    //         this.gs.setAuthenticated(true);
-    //         this.invalidLogin = false;
-    //         this.router.navigate(['']);
-    //       } else {
-    //         // this.gs.openAlert("Aviso!", "Login ou senha inválido!",null, 5000);
-    //         this.objAuthentication.Password = "";
-    //         document.getElementById("password").focus();
-    //       }
-    //     } else {
-    //       this.objAuthentication.Password = undefined;
-    //       document.getElementById("password").focus();
-    //       this.invalidLogin = true;
-    //     }
-    //   },
-    //   err => {
-    //     this.objAuthentication.Password = undefined;
-    //     document.getElementById("password").focus();
-    //     this.invalidLogin = true;
-    //     // this.gs.openAlert("Aviso!", " "+ errorLocation +" inválido! ", null, 5000 );
-    //   }
-    // );
+      if(this.objAuthentication.UserName == "~bacala" && this.objAuthentication.Password=="123"){
+        this.gs.setUserSession('asjdhfkjsahdfo8478rwu489r');
+        this.gs.setAuthenticated(true);
+        this.invalidLogin = false;
+      this.router.navigate(['']);
+      }else{
+      this.objAuthentication.Password = undefined;
+      document.getElementById("password").focus();
+      this.invalidLogin = true;
+    }
   }
 
   getSessionUser() {

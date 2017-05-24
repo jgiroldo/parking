@@ -1,0 +1,278 @@
+<div class="row">
+  <div class="col-4">
+    <div class="row"
+      style="margin-bottom: 25px;">
+      <div class="col-12"
+        style="color:#fff">
+        <h2>Registrar Saída</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <form [formGroup]="newEntryForm"
+          novalidate>
+          <div class="form-group">
+            <span class="input-span">Placa</span>
+            <input type="text"
+              formControlName="placa"
+              [(ngModel)]="viewModel.placa"
+              class="form-control">
+          </div>
+          <div class="form-group">
+            <span class="input-span">Veículo</span>
+            <input type="text"
+              formControlName="veiculo"
+              [(ngModel)]="viewModel.veiculo"
+              class="form-control">
+          </div>
+          <div class="form-group">
+            <span class="input-span">Cor</span>
+            <input type="text"
+              formControlName="cor"
+              [(ngModel)]="viewModel.cor"
+              class="form-control">
+          </div>
+          <div class="form-group">
+            <span class="input-span">Vaga</span>
+            <input type="text"
+              formControlName="vaga"
+              pattern="[0-9]{2}"
+              [(ngModel)]="viewModel.vaga"
+              class="form-control">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button class="nav-btn"
+          [disabled]="!newEntryForm.valid"
+          (click)="save()">Registrar</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 offset-sm-1">
+    <div class="row text-center"
+      style="background-color:#323D3D;color:#fff;margin-top: 30px;">
+      <div class="col-sm-4 col-md-4 ">
+        <div class="row">
+          <div class="col-6 inside-div">
+            <div class="circle">01</div>
+          </div>
+          <div class="col-6 inside-div">
+            <div *ngIf="true"
+              class="">
+              <img src="assets/img/Marker.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>OCUPADA</span>
+            </div>
+            <div *ngIf="false"
+              class="livre">
+              <img src="assets/img/Check.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>LIVRE</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 inside-div">
+            <div class="circle">02</div>
+          </div>
+          <div class="col-6 inside-div">
+            <div *ngIf="false"
+              class="">
+              <img src="assets/img/Marker.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>OCUPADA</span>
+            </div>
+            <div *ngIf="true"
+              class="livre">
+              <img src="assets/img/Check.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>LIVRE</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 inside-div">
+            <div class="circle">03</div>
+          </div>
+          <div class="col-6 inside-div">
+            <div *ngIf="true"
+              class="">
+              <img src="assets/img/Marker.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>OCUPADA</span>
+            </div>
+            <div *ngIf="false"
+              class="livre">
+              <img src="assets/img/Check.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>LIVRE</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 inside-div">
+            <div class="circle">04</div>
+          </div>
+          <div class="col-6 inside-div">
+            <div *ngIf="true"
+              class="">
+              <img src="assets/img/Marker.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>OCUPADA</span>
+            </div>
+            <div *ngIf="false"
+              class="livre">
+              <img src="assets/img/Check.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>LIVRE</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 inside-div">
+            <div class="circle">05</div>
+          </div>
+          <div class="col-6 inside-div">
+            <div *ngIf="true"
+              class="">
+              <img src="assets/img/Marker.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>OCUPADA</span>
+            </div>
+            <div *ngIf="false"
+              class="livre">
+              <img src="assets/img/Check.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>LIVRE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-4"
+        style="font-size:28px;">
+        VAGAS
+      </div>
+      <div class="col-sm-4 col-md-4">
+        <div class="row">
+          <div class="col-6 inside-div">
+            <div *ngIf="false"
+              class="">
+              <img src="assets/img/Marker.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>OCUPADA</span>
+            </div>
+            <div *ngIf="true"
+              class="livre">
+              <img src="assets/img/Check.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>LIVRE</span>
+            </div>
+          </div>
+          <div class=" col-6 inside-div">
+            <div class="circle-right">06</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 inside-div">
+            <div *ngIf="true"
+              class="">
+              <img src="assets/img/Marker.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>OCUPADA</span>
+            </div>
+            <div *ngIf="false"
+              class="livre">
+              <img src="assets/img/Check.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>LIVRE</span>
+            </div>
+          </div>
+          <div class=" col-6 inside-div">
+            <div class="circle-right">07</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 inside-div">
+            <div *ngIf="true"
+              class="">
+              <img src="assets/img/Marker.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>OCUPADA</span>
+            </div>
+            <div *ngIf="false"
+              class="livre">
+              <img src="assets/img/Check.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>LIVRE</span>
+            </div>
+          </div>
+          <div class=" col-6 inside-div">
+            <div class="circle-right">08</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 inside-div">
+            <div *ngIf="false"
+              class="">
+              <img src="assets/img/Marker.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>OCUPADA</span>
+            </div>
+            <div *ngIf="true"
+              class="livre">
+              <img src="assets/img/Check.png"
+                class="inside-div-logo"
+                alt=""> <br>
+
+              <span>LIVRE</span>
+            </div>
+          </div>
+          <div class=" col-6 inside-div">
+            <div class="circle-right">09</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 inside-div">
+            <div *ngIf="false"
+              class="">
+              <img src="assets/img/Marker.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>OCUPADA</span>
+            </div>
+            <div *ngIf="true"
+              class="livre">
+              <img src="assets/img/Check.png"
+                class="inside-div-logo"
+                alt=""> <br>
+              <span>LIVRE</span>
+            </div>
+          </div>
+          <div class=" col-6 inside-div">
+            <div class="circle-right">10</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

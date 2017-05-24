@@ -3,8 +3,9 @@
   <div class="navbar-brand"
     style="padding-left:1.25em">
     <img src="assets/img/Logo.png"
+      [routerLink]="['/dashboard']"
       alt=""
-      width="135px;">
+      width="80px;">
   </div>
   <div class="dashboard-header">
     Sistema de controle para estacionamento
@@ -20,7 +21,10 @@
         <div class="col-12">
           <button type="button"
             name="button"
-            class="nav-btn">Consultar Vagas</button>
+            class="nav-btn"
+            [routerLink]="['/dashboard/search-vacancy']"
+            [routerLinkActive]="['btn-active']"
+            [routerLinkActiveOptions]="{exact:true}">Consultar Vagas</button>
         </div>
       </div>
       <div class="row"
@@ -28,35 +32,52 @@
         <div class="col-12">
           <button type="button"
             name="button"
-            class="nav-btn">Registrar Entrada</button>
-
+            class="nav-btn"
+            [routerLink]="['/dashboard/new-entry']"
+            [routerLinkActive]="['btn-active']"
+            [routerLinkActiveOptions]="{exact:true}">Registrar Entrada</button>
         </div>
       </div>
       <div class="row"
         style="padding-top:15px;">
         <div class="col-12">
-
           <button type="button"
             name="button"
-            class="nav-btn">Registrar Saída</button>
+            class="nav-btn"
+            [routerLink]="['/dashboard/close-stay']"
+            [routerLinkActive]="['btn-active']"
+            [routerLinkActiveOptions]="{exact:true}">Registrar Saída</button>
         </div>
       </div>
       <div class="row"
         style="padding-top:15px;">
         <div class="col-12">
-
           <button type="button"
             name="button"
-            class="nav-btn">Registrar Ocorrência</button>
+            class="nav-btn"
+            [routerLink]="['/dashboard/occurrence']"
+            [routerLinkActive]="['btn-active']"
+            [routerLinkActiveOptions]="{exact:true}">Registrar Ocorrência</button>
         </div>
       </div>
       <div class="row"
         style="padding-top:15px;">
         <div class="col-12">
-
           <button type="button"
             name="button"
-            class="nav-btn">Relatórios</button>
+            class="nav-btn"
+            [routerLink]="['/dashboard/reports']"
+            [routerLinkActive]="['btn-active']"
+            [routerLinkActiveOptions]="{exact:true}">Relatórios</button>
+        </div>
+      </div>
+      <div class="row"
+        style="padding-top:15px;">
+        <div class="col-12">
+          <button type="button"
+            name="button"
+            class="nav-btn"
+            (click)="logout()">Sair</button>
         </div>
       </div>
     </nav>

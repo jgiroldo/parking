@@ -16,12 +16,20 @@ export class VacancyService {
 
 
 
-  generateSession() {
-    // return this.http.get(this.apiUrl + "/GetNewSession", { headers: this.header });
+  saveNewEntry(newEntry: any) {
+    return this.http.post(this.apiUrl + '/save', JSON.stringify(newEntry), { headers: this.header }).map((res: Response) => res.json())
   }
 
-  generateCaptcha() {
-    // return this.http.get(this.apiUrl + '/GetNewCaptcha', { headers: this.header }).map((res: Response) => res.json());
+  closeStay(closeEntry: any) {
+    return this.http.post(this.apiUrl + '/close', JSON.stringify(closeEntry), { headers: this.header }).map((res: Response) => res.json())
+
+  }
+
+  searchStay(placa: string) {
+    let search: URLSearchParams = new URLSearchParams();
+    search.set('placa', placa);
+    return this.http.get(this.apiUrl + "/Placa", { search: search }).map((res: Response) => res.json());
+
   }
 
   getUserName(user: string) {

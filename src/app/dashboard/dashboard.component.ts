@@ -16,4 +16,9 @@ export class DashboardComponent implements OnInit {
 
     ngOnInit(): void {
     }
+
+    logout(){
+      this.gs.logout();
+      setTimeout(() => { this.router.navigate(['/login']) }, 500);
+    }
 }
