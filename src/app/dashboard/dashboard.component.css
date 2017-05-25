@@ -2,24 +2,26 @@
  * Base structure
  */
 
+
 /* Move down content because we have a fixed navbar that is 50px tall */
+
 body {
   padding-top: 50px;
 }
+
 
 /*
  * Typography
  */
 
 
-
 /*
  * Sidebar
  */
- .bg-green{
-   background-color: #044C4C;
 
- }
+.bg-green {
+  background-color: #044C4C;
+}
 
 .sidebar {
   background-color: #044C4C;
@@ -30,11 +32,14 @@ body {
   z-index: 1000;
   padding: 20px;
   overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  overflow-y: auto;
+  /* Scrollable contents if viewport is shorter than content. */
   /*border-right: 1px solid #eee;*/
 }
 
+
 /* Sidebar navigation */
+
 .sidebar {
   padding-left: 0;
   padding-right: 0;
@@ -48,7 +53,7 @@ body {
   width: 100%;
 }
 
-.sidebar .nav-item + .nav-item {
+.sidebar .nav-item+.nav-item {
   margin-left: 0;
 }
 
@@ -56,11 +61,14 @@ body {
   border-radius: 0;
 }
 
+
 /*
  * Dashboard
  */
 
- /* Placeholders */
+
+/* Placeholders */
+
 .placeholders {
   padding-bottom: 3rem;
 }
@@ -70,7 +78,7 @@ body {
   padding-bottom: 1.5rem;
 }
 
-.nav-btn{
+.nav-btn {
   min-width: 80%;
   margin-left: 10%;
   background-color: #EB5800;
@@ -79,21 +87,21 @@ body {
   color: #fff;
 }
 
-.btn-active{
+.btn-active {
   background-color: #ff0000;
 }
 
 
 /*header*/
 
-.dashboard-header{
-  font-size: 60px;
+.dashboard-header {
+  font-size: 50px;
   color: #fff;
   letter-spacing: -2px;
-  padding-left: 40px;
+  /*padding-left: 40px;*/
 }
 
-.main-content{
+.main-content {
   top: 0;
   padding: 20px;
   overflow-x: hidden;
@@ -102,5 +110,4 @@ body {
   position: fixed;
   background-color: #066566;
   bottom: 0;
-
 }

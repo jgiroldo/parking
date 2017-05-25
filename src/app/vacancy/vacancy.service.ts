@@ -32,15 +32,8 @@ export class VacancyService {
 
   }
 
-  getUserName(user: string) {
-    // let search: URLSearchParams = new URLSearchParams();
-    // search.set('userName', user);
-    // return this.http.get(this.apiUrl + "/GetUserName", { search: search }).map((res: Response) => res.json());
+  saveNewReport(newEntry: any) {
+    return this.http.post(this.apiUrl + '/save', JSON.stringify(newEntry), { headers: this.header }).map((res: Response) => res.json())
   }
-
-  getUserNextSteps() {
-    // return this.http.get(this.apiUrl + '/GetStepsByUserID', { headers: this.header }).map((res: Response) => res.json());
-  }
-
 
 }
